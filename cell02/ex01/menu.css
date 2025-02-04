@@ -1,0 +1,40 @@
+#container {
+    margin:100px auto;
+    width:300px;
+    align-items: center;
+    position: relative;
+    transform: scale(1.5);
+    border-style: solid;
+    border-width: 1px;
+    
+}
+#head {
+    background-color: #ffffff;
+    margin: auto;
+    width: 98%;
+    padding: 3px;
+    text-align:center;
+    font-size:16px;
+    color:#ffc300;
+}
+div#list {
+    display: none;
+}
+div#list p {
+    color: #ffc300;
+    margin: auto;
+    background-color: #f7f4f4;
+    width: 98%;
+    padding: 12px 3px;
+    text-align:center;
+}
+#container:hover div#list {
+    display: block;
+}
+#container:hover #head {
+    background-color: #dd1021;
+}
+div#list p:hover {
+    color: #ffffff;
+    background-color: #74d5ff;
+}

@@ -1,0 +1,19 @@
+html, body {
+    height: 100%;
+    margin:0;
+}
+  .bg {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  p {
+    margin:auto;
+    color:white;
+    text-align:center;
+    font-size:30px
+}

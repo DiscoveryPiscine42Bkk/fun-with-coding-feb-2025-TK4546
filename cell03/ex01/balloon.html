@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #balloon {
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                border-radius: 100%;
+                margin: 300px auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="balloon" onclick = "Up()" onmouseleave = "Down()"></div>
+        <script>
+            let size = 200;
+            let color = 0
+            const palette = ["red", "green", "blue"];
+            
+            function Up() {
+                color += 1
+                size += 10
+                changeColor()
+                SizeAdjust()
+            }
+            function Down() {
+                color -= 1
+                size -= 5
+                size = Math.max(size, 200)
+                changeColor()
+                SizeAdjust()
+            }
+
+            function changeColor() {
+                color += 3
+                color = color % 3
+                document.getElementById("balloon").style.backgroundColor = palette[color];
+            }
+            function SizeAdjust() {
+                if (size > 420) {
+                    size = 200;
+                }
+                document.getElementById("balloon").style.width = size + 'px'
+                document.getElementById("balloon").style.height = size + 'px'
+            }
+        </script>
+    </body>
+</html>

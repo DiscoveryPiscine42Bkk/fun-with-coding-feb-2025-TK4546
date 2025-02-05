@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            div {
+                display:flex;
+                justify-content:center;
+                padding: 128px;
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <div>
+        <input type="text" id="x">
+            <select id="operator">
+                <option value="pls">+</option>
+                <option value="mns">-</option>
+                <option value="mlt">*</option>
+                <option value="div">/</option>
+                <option value="mod">%</option>
+            </select>
+            <input type="text" id="y">
+            <input type="submit" value="Try me!" onclick="Qualify()">
+        </div>
+    </body>
+
+    <script>
+    let interval = setInterval(Alerting, 30000);
+    function ResetTime() {
+        clearInterval(interval)
+        interval = setInterval(Alerting, 30000);
+    }
+    function Alerting() {
+        alert("Please, use me...");
+    }
+    var ans;
+    var left;
+    var right;
+    function Qualify() {
+        left = parseFloat(document.getElementById("x").value);
+        right = parseFloat(document.getElementById("y").value);
+        if (Number.isInteger(left) && Number.isInteger(right) && left >= 0 && right >= 0) {
+            Calculate(document.getElementById("operator").value);
+        } else {
+            ans = "Error :(";
+        }
+        alert(ans);
+        console.log(ans);
+    }
+    function Calculate(n) {
+    switch(n) {
+        case "pls":
+            ans = left + right;
+            break;
+        case "mns":
+            ans = left - right;
+            break;
+        case "mlt":
+            ans = left * right;
+            break;
+        case "div":
+            if (right == 0) {
+                ans = "It's over 9000!"
+            }
+            else {
+                ans = left / right;
+            }
+            break;
+        case "mod":
+            if (right == 0) {
+                ans = "It's over 9000!"
+            }
+            else {
+                ans = left % right;
+            }
+            break;
+    }
+    ResetTime()
+    }
+    </script>
+</html>

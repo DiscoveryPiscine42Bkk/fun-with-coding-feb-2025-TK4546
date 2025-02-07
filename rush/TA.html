@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<head>
+    <title>Rush_Resume</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background-color: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            z-index: 1000;
+        }
+        .bar nav {
+            display: flex;
+            gap: 20px;
+        }
+        .bttn {
+            color: white;
+            text-decoration: none;
+        }
+        .BG_S {
+            padding: 20px;
+            height: 650px;
+            display: flex;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            justify-content: center;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .text-box {
+            cursor: pointer;
+            color: #000000;
+            background-color: rgba(246, 243, 235, 0);
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            font-size: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-style: italic;
+            font-family: cursive;
+            opacity: 80%;
+        }
+        .profile-pic{
+           width: auto; 
+           max-width: 400px;
+           height: 500px;
+           margin: 5% 10% 15% 5%;
+           box-shadow: 8px 8px #333;
+        }
+        .act-des{
+            font-size: large;
+            margin: 10% 10% 15% 0%;
+
+        }
+        .album {
+            position: relative;
+            width: auto;
+            max-width: 400px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            margin: 5% 15% 15% 20%;
+            float: right;
+        }
+        .album img {
+            width: auto;
+            border-radius: 5px;
+            height: 400px;
+        }
+        .nav-button {
+            /*position: absolute;*/       
+            /*top: 50%;*/
+            /*transform: translateY(-50%);*/
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            width: 200px;
+            height: 400px;
+        }
+        .social-icons img {
+            width: 3%;
+            margin-left: 22%;
+        }
+        .left { left: 0; }
+        .right { right: 0; }
+    </style>
+    
+    <script>
+        let currentImageIndex = 0;
+        let currentTextIndex = 0;
+        const images = [
+            "https://i.postimg.cc/Wpg87FCC/IMG-3720.jpg", 
+            "https://i.postimg.cc/QdzsJyWX/IMG-3723.jpg", 
+            "https://i.postimg.cc/9fx9bVYD/0-C3-A77-CD-4-CBF-4-E98-9-EC3-2-C2-DE90-EB45-D.jpg"
+        ];
+        const descriptions = ["My Certificate of Achievement form W&T 2023", 
+        "Internship at GPV Asia (Thailand)", 
+        "My work experience from USA 2023"
+        ];
+        const intro_scripts = ["Welcome to My Portfolio >.<", 
+        "My name is Chaiwiwat Sriyoha", 
+        "Electronic Engineering"
+        ];
+
+        function showImage(index) {
+            document.getElementById('albumImage').src = images[index];
+            document.getElementById('imageDescription').textContent = descriptions[index];
+        }
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            showImage(currentImageIndex);
+        }
+        function previousImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            showImage(currentImageIndex);
+        }
+        function nextIntro(){
+            currentTextIndex = (currentTextIndex + 1) % intro_scripts.length;
+            intro(currentTextIndex);
+        }
+        function intro(index){
+            document.getElementById('textBox').textContent = intro_scripts[index];
+        }
+    </script>
+</head>
+<body>
+    <div class="bar">
+        <h1>csriyoha</h1>
+        <nav>
+            <a href="#section1" class="bttn">Home</a>
+            <a href="#section2" class="bttn">About</a>
+            <a href="#section3" class="bttn">Activity</a>
+            <a href="#bottom" class="bttn">Contact</a>
+        </nav>
+    </div>
+    <div style="margin-top: 70px;">
+        <div id="section1" class="BG_S" style="background-image: url(https://i.postimg.cc/4yhZMbCD/pexels-tdcat-59523.jpg);">
+            <div id="textBox" class="text-box" onclick="nextIntro()">Welcome to My Portfolio >.<</div>
+        </div>
+        <div id="section2" class="BG_S" style="background-image: url(https://i.postimg.cc/7ZNV7FCR/pexels-photo-1353938.webp);">
+            <div style="margin-left: 10%;">
+                <h2 style="margin-top: 15%;">About me</h2>
+                <p style="line-height : 35px;">
+                    Hi. I’m Chaiwiwwat Sriyoha or you can call me Ta.I live in Bangkok, Thailand. 
+                    I’m now 23 years old. I basically speak Thai and a little bit of English. 
+                    I’m adaptable, hard-working, fast learning, and outgoing person. 
+                    I am strongly driven, love to challenge myself with new experiences to maximize my potential to be the most efficient. 
+                    I went to Work and Travel last year at Kill Devil Hills, NC. 
+                    I worked at Dunkin as a first  job and at Little Caesars as a second job. 
+                    I totally worked around 70 hours a week so I’m absolutely hard worker! 
+                </p>
+                <h2 style="margin-top: 5%;">Skills</h2>
+                <p>
+                    - Microsoft Office
+                </p>
+                <p>
+                    - LTspice
+                </p>
+                <p>
+                    - Oscilloscope,Funtion Generator,Multimete
+                </p>
+                <h2 style="margin-top: 5%;">Soft Skills</h2>
+                <p>
+                    - Communication, Teamwork, Adaptability, Flexibility
+                </p>
+            </div>
+            <img src="https://i.postimg.cc/CLbGb3Bg/S-71843847.jpg" alt="Description" class= "profile-pic">
+        </div>
+        <div id="section3" class="BG_S" style="background-image: url(123.jpg);">
+            <div class="album">
+                <button class="nav-button left" onclick="previousImage()">&#10094;</button>
+                <img id="albumImage" src="https://i.postimg.cc/Wpg87FCC/IMG-3720.jpg" alt="Album Image">
+                <button class="nav-button right" onclick="nextImage()">&#10095;</button>
+            </div>
+            <p id="imageDescription" class="act-des">My Certificate of Achievement form W&T 2023</p>
+        </div>
+        <hr>
+        <div id="bottom" class="social-icons">
+            <a href = "https://i.postimg.cc/Z5HHGGLS/IMG-3725.jpg">
+                <img src="https://i.postimg.cc/NFXbZLdJ/123734.png" alt=" Social Icon 1" >
+            </a>
+            <a href = "https://www.facebook.com/chaiwiwat.sriyoha/">
+                <img src="https://i.postimg.cc/R0frQVBR/84685ba9637a951591040426a46da70f.jpg" alt="Social Icon 2">
+            </a>
+            <a href = "https://www.instagram.com/txta_z/">
+                <img src="https://i.postimg.cc/KYQSjpr7/1683191308instagram-logo-black-and-white.png" alt="Social Icon 3">
+            </a>
+        </div>
+    </div>
+</body>
+</html>

@@ -31,22 +31,30 @@
             padding: 20px;
             height: 650px;
             display: flex;
+            justify-content: center;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
             background-color: #f6f3eb;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .BG {
             height: 100%;
             display: flex;
+            justify-content: center;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             padding: 20px;
         }
         .text-box {
             cursor: pointer;
             color: #000000;
-            background-color: #f6f3eb;
-            height: 100%;
+            background-color: rgba(246, 243, 235, 0);
+            height: 80%;
             width: 100%;  
-            font-size: 150px;
+            font-size: 80px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -145,25 +153,27 @@
         </nav>
     </div>
     <div style="margin-top: 70px;">
-        <div id="home" class="OBG">
+        <div id="home" class="OBG" style="background-image: url(19.png);">
             <div id="textBox" class="text-box" onclick="nextIntro()">Greeting visitors!</div>
         </div>
         <div id="about" class="BG" style="background-image: url(18.png);">
             <div style="margin-left: 20%;">
                 <h2 style="margin-top: 15%;">About me</h2>
-                <p style="line-height: 40px;">
+                <p style="line-height: 40px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
                     An Electronics Engineering who interested in Semiconductors industry. Focus on Digital IC design,  Testbench verification in both FPGA and Simulation tools. But also interested in Controller, PLC, IoT, MATLAB&Simulink moreover I always desire to learn new things, including improve myself ever.
                 </p>
                 <h2 style="margin-top: 5%;">SKILLS</h2>
-                <p>
-                    - Experienced in programming C, Python, MATLAB and Verilog
-                </p>
-                <p>
-                    - Quite good at English communication
-                </p>
-                <p>
-                    - Eager to learn new things and also self-improve
-                </p>
+                <div style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    <p>
+                        - Experienced in programming C, Python, MATLAB and   Verilog
+                    </p>
+                    <p>
+                        - Quite good at English communication
+                    </p>
+                    <p>
+                        - Eager to learn new things and also self-improve
+                    </p>
+                </div>
             </div>
             <img src="image.jpg" alt="Description" class= "profile-pic">
         </div>

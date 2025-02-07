@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<head>
+    <title>Rush_Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background-color: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            z-index: 1000;
+        }
+        .bar nav {
+            display: flex;
+            gap: 20px;
+        }
+        .bttn {
+            color: white;
+            text-decoration: none;
+        }
+        .BG_S {
+            padding: 20px;
+            height: 650px;
+            display: flex;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .text-box {
+            cursor: pointer;
+            color: #000000;
+            background-color: #ffffff;
+            height: 100%;
+            width: 100%;  
+            font-size: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-style: italic;
+            font-family: cursive;
+            opacity: 80%;
+        }
+        .profile-pic{
+           width: auto; 
+           max-width: 400px;
+           height: 500px;
+           margin: 5% 10% 15% 5%;
+           box-shadow: 8px 8px #333;
+        }
+        .act-des{
+            font-size: large;
+            margin: 10% 10% 15% 0%;
+        }
+        .album {
+            width: auto;
+            max-width: 400px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            margin: 5% 15% 15% 20%;
+        }
+        .album img {
+            width: auto;
+            border-radius: 5px;
+            height: 400px;
+        }
+        .nav-button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            height: 400px;
+            width: 200px;
+        }
+        .social-icons img {
+            width: 3%;
+            margin-left: 22%;
+        }
+    </style>
+
+    <script>
+        let currentImageIndex = 0;
+        let currentTextIndex = 0;
+        const images = [
+            "https://th.bing.com/th/id/R.520853d30a06d47f5e4c76ff1742d7c8?rik=7SuHPHswahpn9A&pid=ImgRaw&r=0", 
+            "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg", 
+            "https://th.bing.com/th/id/OIP.tzrhj6ISnKtNLJuL8PVvGAHaE6?rs=1&pid=ImgDetMain"
+        ];
+        const descriptions = [" Description A", 
+        "Description B", 
+        "Description C"
+        ];
+
+        const intro_scripts = ["Greeting visitors!", 
+        "My name is 'Narongpon K.'", 
+        "You can call me 'Tonkla'"
+        ];
+
+        function showImage(index) {
+            document.getElementById('albumImage').src = images[index];
+            document.getElementById('imageDescription').textContent = descriptions[index];
+        }
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            showImage(currentImageIndex);
+        }
+        function previousImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            showImage(currentImageIndex);
+        }
+        function nextIntro(){
+            currentTextIndex = (currentTextIndex + 1) % intro_scripts.length;
+            intro(currentTextIndex);
+        }
+        function intro(index){
+            document.getElementById('textBox').textContent = intro_scripts[index];
+        }
+    </script>
+</head>
+<body>
+    <div class="bar">
+        <h1>nakrutch</h1>
+        <nav>
+            <a href="#section1" class="bttn">Home</a>
+            <a href="#section2" class="bttn">About</a>
+            <a href="#section3" class="bttn">Activity</a>
+            <a href="#bottom" class="bttn">Contact</a>
+        </nav>
+    </div>
+    <div style="margin-top: 70px;">
+        <div id="section1" class="BG_S">
+            <div id="textBox" class="text-box" onclick="nextIntro()">Greeting visitors!</div>
+        </div>
+        <div id="section2" class="BG_S">
+            <div style="margin-left: 20%;">
+                <h2 style="margin-top: 15%;">About me</h2>
+                <p>
+                    An Electronics Engineering who interested in Semiconductors industry. Focus on Digital IC design,  Testbench verification in both FPGA and Simulation tools. But also interested in Controller, PLC, IoT, MATLAB&Simulink moreover I always desire to learn new things, including improve myself ever.
+                </p>
+                <h2 style="margin-top: 5%;">SKILLS</h2>
+                <p>
+                    - Experienced in programming C, Python, MATLAB and Verilog
+                </p>
+                <p>
+                    - Quite good at English communication
+                </p>
+                <p>
+                    - Eager to learn new things and also self-improve
+                </p>
+            </div>
+            <img src="image.jpg" alt="Description" class= "profile-pic">
+        </div>
+        <div id="section3" class="BG_S">
+            <div class="album">
+                <button class="nav-button left" onclick="previousImage()">&#10094;</button>
+                <img id="albumImage" src="https://th.bing.com/th/id/R.520853d30a06d47f5e4c76ff1742d7c8?rik=7SuHPHswahpn9A&pid=ImgRaw&r=0" alt="Album Image">
+                <button class="nav-button right" onclick="nextImage()">&#10095;</button>
+            </div>
+            <p id="imageDescription" class="act-des">Description A</p>
+        </div>
+        <hr>
+        <div id="bottom" class="social-icons">
+            <a href = "https://www.youtube.com/watch?v=INscMGmhmX4">
+                <img src="https://static.vecteezy.com/system/resources/previews/010/829/986/large_2x/phone-icon-in-trendy-flat-style-free-png.png" alt=" Social Icon 1" >
+            </a>
+            <a href = "xm2.html">
+                <img src="https://static.vecteezy.com/system/resources/previews/020/009/614/original/email-and-mail-icon-black-free-png.png" alt="Social Icon 2">
+            </a>
+            <a href = "https://www.youtube.com/shorts/DamtNQaVOq0">
+                <img src="https://clipground.com/images/facebook-icon-clipart-transparent-background-8.png" alt="Social Icon 3">
+            </a>
+        </div>
+    </div>
+</body>
+</html>

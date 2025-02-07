@@ -27,17 +27,23 @@
             color: white;
             text-decoration: none;
         }
-        .BG_S {
+        .OBG {
             padding: 20px;
             height: 650px;
             display: flex;
-            background-color: #ffffff;
+            background-color: #f6f3eb;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .BG {
+            height: 100%;
+            display: flex;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
         }
         .text-box {
             cursor: pointer;
             color: #000000;
-            background-color: #ffffff;
+            background-color: #f6f3eb;
             height: 100%;
             width: 100%;  
             font-size: 150px;
@@ -59,6 +65,7 @@
         .act-des{
             font-size: large;
             margin: 10% 10% 15% 0%;
+            color: #000000;
         }
         .album {
             width: auto;
@@ -131,20 +138,20 @@
     <div class="bar">
         <h1>nakrutch</h1>
         <nav>
-            <a href="#section1" class="bttn">Home</a>
-            <a href="#section2" class="bttn">About</a>
-            <a href="#section3" class="bttn">Activity</a>
-            <a href="#bottom" class="bttn">Contact</a>
+            <a href="#home" class="bttn">Home</a>
+            <a href="#about" class="bttn">About</a>
+            <a href="#activity" class="bttn">Activity</a>
+            <a href="#contact" class="bttn">Contact</a>
         </nav>
     </div>
     <div style="margin-top: 70px;">
-        <div id="section1" class="BG_S">
+        <div id="home" class="OBG">
             <div id="textBox" class="text-box" onclick="nextIntro()">Greeting visitors!</div>
         </div>
-        <div id="section2" class="BG_S">
+        <div id="about" class="BG" style="background-image: url(18.png);">
             <div style="margin-left: 20%;">
                 <h2 style="margin-top: 15%;">About me</h2>
-                <p>
+                <p style="line-height: 40px;">
                     An Electronics Engineering who interested in Semiconductors industry. Focus on Digital IC design,  Testbench verification in both FPGA and Simulation tools. But also interested in Controller, PLC, IoT, MATLAB&Simulink moreover I always desire to learn new things, including improve myself ever.
                 </p>
                 <h2 style="margin-top: 5%;">SKILLS</h2>
@@ -160,7 +167,7 @@
             </div>
             <img src="image.jpg" alt="Description" class= "profile-pic">
         </div>
-        <div id="section3" class="BG_S">
+        <div id="activity" class="BG" style="background-image: url(19.png);">
             <div class="album">
                 <button class="nav-button left" onclick="previousImage()">&#10094;</button>
                 <img id="albumImage" src="https://th.bing.com/th/id/R.520853d30a06d47f5e4c76ff1742d7c8?rik=7SuHPHswahpn9A&pid=ImgRaw&r=0" alt="Album Image">
@@ -169,11 +176,11 @@
             <p id="imageDescription" class="act-des">Description A</p>
         </div>
         <hr>
-        <div id="bottom" class="social-icons">
+        <div id="contact" class="social-icons">
             <a href = "https://www.youtube.com/watch?v=INscMGmhmX4">
                 <img src="https://static.vecteezy.com/system/resources/previews/010/829/986/large_2x/phone-icon-in-trendy-flat-style-free-png.png" alt=" Social Icon 1" >
             </a>
-            <a href = "xm2.html">
+            <a href = "https://www.youtube.com/shorts/jwKa0rQ2nzU">
                 <img src="https://static.vecteezy.com/system/resources/previews/020/009/614/original/email-and-mail-icon-black-free-png.png" alt="Social Icon 2">
             </a>
             <a href = "https://www.youtube.com/shorts/DamtNQaVOq0">
